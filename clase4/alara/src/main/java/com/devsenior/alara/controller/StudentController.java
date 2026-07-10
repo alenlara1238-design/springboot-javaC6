@@ -31,7 +31,9 @@ public class StudentController {
         StudentRequest request
 
     ){
-        ResponseEntity.status(HttpStatus.CREATED);
-        return ResponseEntity.ok(service.save(request));
+        
+       return ResponseEntity
+        .status(HttpStatus.CREATED)
+        .body(service.save(request));
     }
 }
